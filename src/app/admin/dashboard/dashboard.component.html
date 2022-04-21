@@ -4,6 +4,7 @@
       <mat-list-item role="listitem">
         <ng-container>
           <mat-icon class="mat-18">home</mat-icon>
+          <h2 class="">Dashboard</h2>
         </ng-container>
       </mat-list-item>
       <mat-list-item role="listitem">
@@ -14,11 +15,5 @@
   </mat-drawer>
   <mat-drawer-content>
     <!-- <router-outlet></router-outlet> -->
-    <ng-container *ngIf="isLogin">
-      <app-admin-login></app-admin-login>
-    </ng-container>
-    <ng-container *ngIf="isLogin">
-      <app-users></app-users>
-    </ng-container>
   </mat-drawer-content>
 </mat-drawer-container>

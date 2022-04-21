@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
+  email: String = '';
+   arr = [1, 2, 3, 4, 5, 6];
 }
