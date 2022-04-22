@@ -12,8 +12,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule} from '@angular/material/list';
 import { UsersComponent } from './users/users.component';
+// import { AdminHomeComponent } from './admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UsersComponent } from './users/users.component';
     AdminComponent,
     AdminLoginComponent,
     UsersComponent,
+    // AdminHomeComponent,
   ],
   imports: [
     CommonModule,

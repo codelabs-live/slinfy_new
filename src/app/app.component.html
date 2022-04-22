@@ -1,12 +1,31 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
-{{ title }}
-<input type="email" [(ngModel)]="email" />
-{{ email }}
+<!-- *ngIf="!hasRoute('admin')" -->
+<div class="wrapper" *ngIf="!hasRoute('admin')">
+  <!--Frontend section-->
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  <!-- End frontend-->
+</div>
 
-<button mat-button [matMenuTriggerFor]="menuRef">Trigger</button>
-
-<mat-menu #menuRef="matMenu">
-  <button mat-menu-item *ngFor="let item of arr">item</button>
-</mat-menu>
+<!--Admin section-->
+<div *ngIf="hasRoute('admin')" class="sidebar">
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <ng-container>
+            <mat-icon class="mat-18">home</mat-icon>
+            <h2 class="">Dashboard</h2>
+          </ng-container>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <button mat-raised-button>Login</button>
+        </mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <!-- <router-outlet></router-outlet> -->
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

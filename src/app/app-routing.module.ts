@@ -6,11 +6,17 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
+
   {
-    path: 'admin', component: AdminComponent, children: [
+    path: 'admin', component: AdminComponent,
+
+    children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: AdminLoginComponent },
-      { path:'dashboard',component:DashboardComponent},
+      {
+        path: 'dashboard', component: DashboardComponent, children: [
+
+      ]},
 
   ]}
 ];
